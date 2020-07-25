@@ -1,1 +1,6 @@
 theme: jekyll-theme-architect
+baseurl: ""
+repository: slorg1/slorg1.github.io
+plugins:
+  - "jekyll-github-metadata"
+
