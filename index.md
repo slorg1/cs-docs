@@ -1,3 +1,7 @@
+---
+layout: index
+post-section-title: Posts
+---
 # Welcome!
 
 This is the root of the site. It is meant to index all articles available here.
