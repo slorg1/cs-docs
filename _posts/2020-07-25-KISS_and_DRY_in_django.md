@@ -52,7 +52,10 @@ You will notice that in our specific case, we made a key assumption and we passe
 we could assume (or know) that `my_value` could not be `None`.
 
 So, what? It works! No, crash. :see_no_evil:
-True, the code will work and will certainly not crash as we force-convert the value as a string. What this means is that `.lower().strip()` will always work against a string: peachy!
+
+True, the code will work and will certainly not crash as we force-convert the value to a string  
+:heavy_check_mark:
+What this means is that `.lower().strip()` will always work against a string: peachy!
 
 :point_right: It also means that `None` will turn to `"None"` *ooops*  :broken_heart:
 
@@ -68,5 +71,5 @@ In any case. what did we gain:
 
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDg2NTcxOSwtMjc2NDg2MDc1XX0=
+eyJoaXN0b3J5IjpbMTYwNTI0ODM2LC0yNzY0ODYwNzVdfQ==
 -->
