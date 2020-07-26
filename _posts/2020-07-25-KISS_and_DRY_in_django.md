@@ -67,11 +67,11 @@ In any case. what did we gain:
 2. a centralized way of changing how the data is converted
 3. we **abstracted** the way data is converted. Now we do not think about **HOW** to lowercase and strip whitespace from a string, we think about **WHAT** what want to do: the transformation
 
-> # Take away
-> Centralizing code allows:
-> 1. To abtract the details of implementation (**HOW**) and focus on the outcome (**WHAT**)
-> 2. To share bugs and to share code fixes :smiley:
+> ### Take aways
+> - When centralizing code, we abtract the details of implementation (**HOW**) and focus on the outcome (**WHAT**)
+> - Centralizing code allows us to share bugs and to share code fixes :smiley:
+> - Be careful, centralizing code also central
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2MTA2OTE5NSwtMjc2NDg2MDc1XX0=
+eyJoaXN0b3J5IjpbLTE0MDc0MTg2OTYsLTI3NjQ4NjA3NV19
 -->
