@@ -70,8 +70,8 @@ In any case. what did we gain:
 > ### Take aways
 > - When centralizing code, we abtract the details of implementation (**HOW**) and focus on the outcome (**WHAT**)
 > - Centralizing code allows us to share bugs and to share code fixes :smiley:
-> - Be careful, centralizing code also central
+> - Be careful, centralizing code also centralizes the assumptions
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDc0MTg2OTYsLTI3NjQ4NjA3NV19
+eyJoaXN0b3J5IjpbLTkxNjA0OTc3NiwtMjc2NDg2MDc1XX0=
 -->
