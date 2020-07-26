@@ -30,6 +30,9 @@ class StringUtils:
 	   return str(my_value).lower().strip() 
 ```
 But wait, this will turn any value into a string.
+
+Now, we do quick search through the project for anything that resembles that e.g. grep for `.lower().strip()` and replace it nicely with `StringUtils.to_lower_string(my_value)`
+
 :scream_cat:**GOTCHA included**:scream_cat:
 You will notice that in our specific case, we made a key assumption and we passed it on to the utility clas:
 we could assume (or know) that `my_value` could not be `None`.
@@ -39,5 +42,5 @@ True, the code will work and will certainly not crash as we force convert the va
 :point_right: It also means that `None` will turn to `"None"` *ooops*
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MTQ5NTUzOSwtMTc1NjU1MzY0N119
+eyJoaXN0b3J5IjpbMTI3MTgwMjA3MywtMTc1NjU1MzY0N119
 -->
