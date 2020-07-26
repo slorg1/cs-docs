@@ -34,8 +34,9 @@ You will notice that in our specific case, we made a key assumption and we passe
 we could assume (or know) that `my_value` could not be `None`.
 
 So, what? It works! No, crash.
-True, the code will work and will certainly not crash as we force convert the value as a para
+True, the code will work and will certainly not crash as we force convert the value as a string. What this means is that `.lower().strip()` will always work against a string: peachy!
+It also means that `None` will turn to `"None"` *ooops*
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MDg0NzQ4Ml19
+eyJoaXN0b3J5IjpbLTE1MzIwNzEwNDhdfQ==
 -->
