@@ -131,7 +131,8 @@ How about now?
 ```python
 import itertools
 
-# same initialization
+# same initializations cut for conciseness
+
 for label, v, in itertools.chain(
 								values, 
 								(None, 0,), # flush the buffer
@@ -149,5 +150,5 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxMjkzOTIzMCwtMjc2NDg2MDc1XX0=
+eyJoaXN0b3J5IjpbMzExMjkyMzc1LC0yNzY0ODYwNzVdfQ==
 -->
