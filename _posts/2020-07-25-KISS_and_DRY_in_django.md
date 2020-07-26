@@ -141,11 +141,7 @@ for label, v, in itertools.chain(values, (None, 0,),):
 		sum_of_values = 0
 
 	sum_of_values += v
-
-# we need to deal with "b" now...
-if current_label != None:
-	my_dict[current_label] = sum_of_values
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzAzMDE2MTEsLTI3NjQ4NjA3NV19
+eyJoaXN0b3J5IjpbLTQwODA1MjQ4MiwtMjc2NDg2MDc1XX0=
 -->
