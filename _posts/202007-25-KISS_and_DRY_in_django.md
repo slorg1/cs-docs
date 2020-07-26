@@ -25,10 +25,12 @@ id = str(my_value).lower().strip() # ... whatever else you want to do
 We will use a library or framework that will do a solide 80%+ of the work. Then, for the remaining 20%, applying our pragmatic KISS learnings, we will write the code as we go and centralize the code as we start writing it multiple times (3+ as a good rule of thumb) and we gain an understanding of the pattern.
 ```python
 class StringUtils:
-    def to_string_not_empty()
+    def to_lower_string_not_empty():
+	   return str(my_value).lower().strip() 
 ```
-
+But wait, this will turn any value into a string.
+**GOTCHA   :scream_cat: included**
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0MjM4NjQ5N119
+eyJoaXN0b3J5IjpbMTIyNjAzNzkyOF19
 -->
