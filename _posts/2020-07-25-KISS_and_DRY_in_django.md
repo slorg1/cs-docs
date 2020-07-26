@@ -59,6 +59,7 @@ True, the code will work and will certainly not crash as we force-convert the va
 You could argue 2 things:
 - [x] This is on purpose: we are all set!
 - [x] This was an original bug and we can fix it in 1 place and everyone gets the benefit   :revolving_hearts:
+{: style='list-style-type: none'}
 
 In any case. what did we gain:
 1. a centralized way of converting data
