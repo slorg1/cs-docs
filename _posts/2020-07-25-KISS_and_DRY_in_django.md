@@ -1,3 +1,5 @@
+---
+---
 # Code booboos
 We all make mistakes and the key is not to worry about them: it is to promote healthy habits so they either do not happen again or they are easy to fix when they happen.
 
