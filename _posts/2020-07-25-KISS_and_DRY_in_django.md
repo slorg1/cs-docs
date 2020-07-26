@@ -107,9 +107,14 @@ In any case. what did we gain:
 This is a technic that I call "flushing the buffer". It is used when iterating over iterables and operations needs to happen at each boundaries.
 
 ```python
-for i in range(20):
-    i += 1
+for k, v in my_dict.iteritems():
+
+	if current_key == k:
+		sum_of_values += v
+	else:
+		my_dict[current_key] = v
+		sum_of_values
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk2NjQ4NDc0LC0yNzY0ODYwNzVdfQ==
+eyJoaXN0b3J5IjpbLTI5MzQxMjg5LC0yNzY0ODYwNzVdfQ==
 -->
