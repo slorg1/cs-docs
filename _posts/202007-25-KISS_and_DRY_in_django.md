@@ -29,8 +29,9 @@ class StringUtils:
 	   return str(my_value).lower().strip() 
 ```
 But wait, this will turn any value into a string.
-**GOTCHA   :scream_cat: included**
+:scream_cat:**GOTCHA included**:scream_cat:
+You will notice that in our specific case, we made a key assumption and we passed it on to the ut, we could assume (or know) that `my_value` could not be `None`
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNjAzNzkyOF19
+eyJoaXN0b3J5IjpbMjAwNDI4MDExOV19
 -->
