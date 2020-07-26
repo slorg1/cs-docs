@@ -30,8 +30,12 @@ class StringUtils:
 ```
 But wait, this will turn any value into a string.
 :scream_cat:**GOTCHA included**:scream_cat:
-You will notice that in our specific case, we made a key assumption and we passed it on to the ut, we could assume (or know) that `my_value` could not be `None`
+You will notice that in our specific case, we made a key assumption and we passed it on to the utility clas:
+we could assume (or know) that `my_value` could not be `None`.
+
+So, what? It works! No, crash.
+True, the code will work and will certainly not crash as we force convert the value as a para
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNDI4MDExOV19
+eyJoaXN0b3J5IjpbLTY5MDg0NzQ4Ml19
 -->
