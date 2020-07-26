@@ -62,6 +62,15 @@ You could argue 2 things:
 - [x] This was an original bug and we can fix it in 1 place and everyone gets the benefit   :revolving_hearts:
 {: style='list-style-type: none'}
 
+But, wait? What should the method return in case of `None`?
+Well, that is entirely depend on your application and the context in which it is used.
+Here are 2 examples highlighting key assumptions:
+```python
+```
+
+Ala
+```python
+```
 In any case. what did we gain:
 1. a centralized way of converting data
 2. a centralized way of changing how the data is converted
@@ -73,5 +82,5 @@ In any case. what did we gain:
 > - Be careful, centralizing code also centralizes the assumptions
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNjA0OTc3NiwtMjc2NDg2MDc1XX0=
+eyJoaXN0b3J5IjpbMTYyNzE4NDgyNSwtMjc2NDg2MDc1XX0=
 -->
