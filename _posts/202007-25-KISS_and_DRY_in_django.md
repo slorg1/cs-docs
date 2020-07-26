@@ -26,13 +26,20 @@ We will use a library or framework that will do a solide 80%+ of the work. Then,
 
 ```python
 class StringUtils:
+	"""
+		Utility centralizing common string manipulations.
+	"""
+
 	@staticmethod
-    def to_lower_string_not_empty(input_value):
+    def to_stripped_lowercase_string(input_value):
+    """
+	    Given any input value, returns a string lowercased and without whitespaces at the beginning and at the end.
+    """
 	   return str(input_value).lower().strip() 
 ```
 But wait, this will turn any value into a string.
 
-Now, we do quick search through the project for anything that resembles that e.g. grep for `.lower().strip()` and replace it nicely with `StringUtils.to_lower_string(my_value)`.
+Now, we do quick search through the project for anything that resembles that e.g. grep for `.lower().strip()` and replace it nicely with `StringUtils.input_value(my_value)`.
 
  :heartpulse: Hurray! We centralized code and we obviously did not repeat ourself!
 
@@ -55,6 +62,6 @@ That is true and in any cases what did we gain:
 5. a centralized way of changing how the data is converted
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1Mzc3ODgxMDEsLTE3NTY1NTM2NDddfQ
+eyJoaXN0b3J5IjpbLTIxMDMyNTg3NjQsLTE3NTY1NTM2NDddfQ
 ==
 -->
