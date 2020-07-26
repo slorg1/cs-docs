@@ -9,6 +9,8 @@ I will not pretent to know it all (I do not), it only share here a few fondament
 
 # Keep it DRY...
 ...and it shall not get infected :stuck_out_tongue:
+
+DRY is an old enough concept. It stands Do not Repeat Yourself and we have all heard it one way or the other. It is easy to c
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAzNzU3MDAxXX0=
+eyJoaXN0b3J5IjpbLTg4Nzk0MjE3XX0=
 -->
