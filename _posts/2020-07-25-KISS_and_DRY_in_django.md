@@ -114,13 +114,21 @@ current_label = None
 for label, v, in values:
 
 	if current_label != label:
-		if current_label != None: # for the sake of the example we assume that the labels cannot be None
-			my_dict[current_label] = v
+		if current_label != None: # for the example we assume that the labels cannot be None
+			my_dict[current_label] = sum_of_values
 		current_label = label
 		sum_of_values = 0
 
 	sum_of_values += v
+
+# we need to deal with "b" now...
+my_dict[current_label] = sum_of_values
+current_label = label
+sum_of_values = 0
+
+sum_of_values += v
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDc0ODg1MzEzLC0yNzY0ODYwNzVdfQ==
+eyJoaXN0b3J5IjpbMTQ3MjA0NjQxNywtMjc2NDg2MDc1XX0=
 -->
