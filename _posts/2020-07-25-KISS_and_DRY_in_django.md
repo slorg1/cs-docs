@@ -104,7 +104,8 @@ In any case. what did we gain:
 > - Be careful, centralizing code also centralizes the assumptions
 
 ### "Flushing the buffer"
-This is a technic that I call "flushing the buffer". It is used when iterating over iterables and operations needs to happen at each boundaries.
+This is a technic that I call "flushing the buffer".
+It is used when iterating over iterables, accumulating data and operations needs to happen at each boundaries.
 
 ```python
 my_dict = {}
@@ -132,16 +133,20 @@ my_dict = {}
 values = (("a", 1,), ("a", 2), ("a", 30,), ("b", 32,), ("b", 40),)
 current_label = None
 
-for label, v, in itertools.chain(values, (None, 0,),):
+for label, v, in itertools.chain(
+								values, 
+								(None, 0,), # flush the buffer
+								):
 
 	if current_label != label:
 		if current_label != None: # for the example we assume that the labels cannot be None
 			my_dict[current_label] = sum_of_values
 		current_label = label
-		sum_of_values = 0
+		sum_of_values = 0 # this is our buffer
 
 	sum_of_values += v
 ```
+While this allows for no code duplication, it is a little 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwODA1MjQ4MiwtMjc2NDg2MDc1XX0=
+eyJoaXN0b3J5IjpbLTExOTUxNTA2NTgsLTI3NjQ4NjA3NV19
 -->
