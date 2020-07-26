@@ -63,7 +63,7 @@ You could argue 2 things:
 {: style='list-style-type: none'}
 
 But, wait? What should the method return in case of `None`?
-Well, that is entirely depend on your application and the context in which it is used.
+Well, that entirely depends on your application and the context in which it is used.
 
 Here are 2 examples highlighting key assumptions:
 
@@ -98,11 +98,11 @@ In any case. what did we gain:
 2. a centralized way of changing how the data is converted
 3. we **abstracted** the way data is converted. Now we do not think about **HOW** to lowercase and strip whitespace from a string, we think about **WHAT** what want to do: the transformation
 
-> ### Take aways
-> - When centralizing code, we abtract the details of implementation (**HOW**) and focus on the outcome (**WHAT**)
+> ### Takeaways
+> - When centralizing code, we abstract the details of implementation (**HOW**) and focus on the outcome (**WHAT**)
 > - Centralizing code allows us to share bugs and to share code fixes :smiley:
 > - Be careful, centralizing code also centralizes the assumptions
-## 
+## "Flushing the buffer"
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDIwODA5OTgsLTI3NjQ4NjA3NV19
+eyJoaXN0b3J5IjpbMTIxODgwMjA0NywtMjc2NDg2MDc1XX0=
 -->
