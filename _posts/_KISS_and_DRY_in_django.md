@@ -1,4 +1,4 @@
-#KISS it: it'll make it better to make it DRY
+# KISS it: it'll make it better and keep it DRY 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTk1NTMyMzZdfQ==
+eyJoaXN0b3J5IjpbLTEzNTQ1Nzc2OTVdfQ==
 -->
