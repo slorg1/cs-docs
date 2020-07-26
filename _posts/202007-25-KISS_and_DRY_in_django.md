@@ -15,7 +15,7 @@ Building upon the basis of [KISS](#KISS) it is easy to understand that to keep o
 DRY is more of a mindset than a precise set of rule. It is easy to isolate it at the low level. We call all recognize a simple pattern when it happens in a piece of code (method) or across a couple pieces of code.
 ##
 ## Method
-A grand classic are utility classes.
+### A grand classic are utility classes.
 As an example, we can think of string manipulation. How many time do we write the same or similar code at API boundaries. We all know the best practices and we cleanse data like we mean it.
 Instead of replicating these lines of code:
 
@@ -26,12 +26,15 @@ We will use a library or framework that will do a solide 80%+ of the work. Then,
 
 ```python
 class StringUtils:
-    def to_lower_string_not_empty():
-	   return str(my_value).lower().strip() 
+	@staticmethod
+    def to_lower_string_not_empty(input_value):
+	   return str(input_value).lower().strip() 
 ```
 But wait, this will turn any value into a string.
 
-Now, we do quick search through the project for anything that resembles that e.g. grep for `.lower().strip()` and replace it nicely with `StringUtils.to_lower_string(my_value)`
+Now, we do quick search through the project for anything that resembles that e.g. grep for `.lower().strip()` and replace it nicely with `StringUtils.to_lower_string(my_value)`.
+
+ :heartpulse: Hurray! We centralized code and we obviously did not repeat ourself!
 
 :scream_cat:**GOTCHA included**:scream_cat:
 You will notice that in our specific case, we made a key assumption and we passed it on to the utility clas:
@@ -42,5 +45,5 @@ True, the code will work and will certainly not crash as we force convert the va
 :point_right: It also means that `None` will turn to `"None"` *ooops*
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MTgwMjA3MywtMTc1NjU1MzY0N119
+eyJoaXN0b3J5IjpbOTA5NTc3MTI1LC0xNzU2NTUzNjQ3XX0=
 -->
