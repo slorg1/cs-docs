@@ -16,9 +16,12 @@ DRY is more of a mindset than a precise set of rule. It is easy to isolate it at
 ##
 ## Method
 A grand classic are utility classes.
-As an example, we can think of string manipulation. How many time do we write the same or s
+As an example, we can think of string manipulation. How many time do we write the same or similar code at API boundaries. We all know the best practices and we cleanse data like we mean it.
+Instead of replicating these lines of code:
+
+    enter code here
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMzM3ODA4OV19
+eyJoaXN0b3J5IjpbMTA2MDk3OTc4OV19
 -->
