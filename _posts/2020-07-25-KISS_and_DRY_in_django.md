@@ -108,16 +108,16 @@ This is a technic that I call "flushing the buffer". It is used when iterating o
 
 ```python
 my_dict = {}
+values = (("a", 1,), ("a", 2), ("a", 30,), ("b", 32,), ("b", 40),)
+for label, v, in values:
 
-for k, v in (("a", 1,), ("a", 2), ():
-
-	if current_key != k:
-		my_dict[current_key] = v
-		current_key = k
+	if current_label != label:
+		my_dict[current_label] = v
+		current_label = label
 		sum_of_values = 0
 
 	sum_of_values += v
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkxMjM4NzM4LC0yNzY0ODYwNzVdfQ==
+eyJoaXN0b3J5IjpbMTk2ODIzNzY5MywtMjc2NDg2MDc1XX0=
 -->
