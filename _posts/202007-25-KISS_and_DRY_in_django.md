@@ -35,8 +35,8 @@ we could assume (or know) that `my_value` could not be `None`.
 
 So, what? It works! No, crash.
 True, the code will work and will certainly not crash as we force convert the value as a string. What this means is that `.lower().strip()` will always work against a string: peachy!
-It also means that `None` will turn to `"None"` *ooops*
+:point_right: It also means that `None` will turn to `"None"` *ooops*
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzIwNzEwNDhdfQ==
+eyJoaXN0b3J5IjpbLTE3NTY1NTM2NDddfQ==
 -->
