@@ -104,7 +104,12 @@ In any case. what did we gain:
 > - Be careful, centralizing code also centralizes the assumptions
 
 ### "Flushing the buffer"
-This is a technic that I call "flushing the buffer". It is used when iterating over iterables and an operations needs to happen
+This is a technic that I call "flushing the buffer". It is used when iterating over iterables and operations needs to happen at each boundaries.
+
+```python
+for i in range(20):
+    i += 1
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5OTE5NjU4NCwtMjc2NDg2MDc1XX0=
+eyJoaXN0b3J5IjpbMjk2NjQ4NDc0LC0yNzY0ODYwNzVdfQ==
 -->
