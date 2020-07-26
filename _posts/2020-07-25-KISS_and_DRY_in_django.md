@@ -63,9 +63,9 @@ You could argue 2 things:
 
 In any case. what did we gain:
 1. a centralized way of converting data
-2. we abstracted the way data is converted: now we do not think about **how** to lowercase and strip whitespace from a string, we think about the transformation
-3. a centralized way of changing how the data is converted
+2. a centralized way of changing how the data is converted
+3. we **abstracted** the way data is converted. Now we do not think about **HOW** to lowercase and strip whitespace from a string, we think about **WHAT** what want to do: the transformation
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NjQ4NjA3NV19
+eyJoaXN0b3J5IjpbMTc4MjE4MjM3LC0yNzY0ODYwNzVdfQ==
 -->
