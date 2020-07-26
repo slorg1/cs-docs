@@ -129,10 +129,9 @@ if current_label != None:
 But that is not DRY: we repeated ourselves.
 How about now?
 ```python
-my_dict = {}
-values = (("a", 1,), ("a", 2), ("a", 30,), ("b", 32,), ("b", 40),)
-current_label = None
+import itertools
 
+# same initialization
 for label, v, in itertools.chain(
 								values, 
 								(None, 0,), # flush the buffer
@@ -146,7 +145,9 @@ for label, v, in itertools.chain(
 
 	sum_of_values += v
 ```
-While this allows for no code duplication, it is a little 
+While this allows for no code duplication, it is a little _harder_ to read than the previous version.
+> ### Takeaways
+> - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTUxNTA2NTgsLTI3NjQ4NjA3NV19
+eyJoaXN0b3J5IjpbMTcxMjkzOTIzMCwtMjc2NDg2MDc1XX0=
 -->
