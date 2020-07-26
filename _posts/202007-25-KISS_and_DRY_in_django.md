@@ -19,9 +19,12 @@ A grand classic are utility classes.
 As an example, we can think of string manipulation. How many time do we write the same or similar code at API boundaries. We all know the best practices and we cleanse data like we mean it.
 Instead of replicating these lines of code:
 
-    enter code here
+```python
+id = str(my_value).lower().strip() # ... whatever else you want to do
+```
+We will use a library or framework that will do a solide 80%+ of the work. Then, for the remaining 20% we will write the code as w
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MDk3OTc4OV19
+eyJoaXN0b3J5IjpbMzYxOTQ1Nzg0XX0=
 -->
