@@ -115,7 +115,8 @@ current_label = None
 for label, v, in values:
 
 	if current_label != label:
-		if current_label != None: # for the example we assume that the labels cannot be None
+		# for the example we assume that the labels cannot be None
+		if current_label != None: 
 			my_dict[current_label] = sum_of_values
 		current_label = label
 		sum_of_values = 0
@@ -139,7 +140,7 @@ for label, v, in itertools.chain(
 								):
 
 	if current_label != label:
-		if current_label != None: # for the example we assume that the labels cannot be None
+		if current_label != None:
 			my_dict[current_label] = sum_of_values
 		current_label = label
 		sum_of_values = 0 # this is our buffer
@@ -150,5 +151,5 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzExMjkyMzc1LC0yNzY0ODYwNzVdfQ==
+eyJoaXN0b3J5IjpbLTIwODE1NDEzNTcsLTI3NjQ4NjA3NV19
 -->
