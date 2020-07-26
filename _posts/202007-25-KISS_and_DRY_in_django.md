@@ -48,8 +48,11 @@ True, the code will work and will certainly not crash as we force convert the va
 You could argue 2 things:
 1. this is on purpose
 2. this was an original bug
-
+That is true and in any cases what did we gain:
+3. a centralized way of converting data
+4. we abstracted the way data is converted: now we do not know **how** to lowercase and strip whitespace from a string
+5. a centralized way of changing how the data is converted
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2OTk1OTI1MSwtMTc1NjU1MzY0N119
+eyJoaXN0b3J5IjpbMTU2MjU5MTYxNCwtMTc1NjU1MzY0N119
 -->
