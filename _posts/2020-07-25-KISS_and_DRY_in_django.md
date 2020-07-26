@@ -65,11 +65,31 @@ You could argue 2 things:
 But, wait? What should the method return in case of `None`?
 Well, that is entirely depend on your application and the context in which it is used.
 Here are 2 examples highlighting key assumptions:
+String or `None`
 ```python
+	...
+
+	@staticmethod
+    def to_stripped_lowercase_string(input_value):
+    """
+	    Given any input value, returns a string lowercased and without 
+	    whitespaces at the beginning and at the end.
+    """
+	   return str(input_value).lower().strip() 
 ```
 
-Ala
+Always returns a string
 ```python
+	...
+
+	@staticmethod
+    def to_stripped_lowercase_string(input_value):
+    """
+	    Given any input value, returns a string lowercased and without 
+	    whitespaces at the beginning and at the end.
+		Returns `None` is the input is `None`
+    """
+	   return str(input_value).lower().strip() if input_value is not None else None
 ```
 In any case. what did we gain:
 1. a centralized way of converting data
@@ -82,5 +102,5 @@ In any case. what did we gain:
 > - Be careful, centralizing code also centralizes the assumptions
 ## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNzE4NDgyNSwtMjc2NDg2MDc1XX0=
+eyJoaXN0b3J5IjpbLTE4NjA1NzgwNTIsLTI3NjQ4NjA3NV19
 -->
