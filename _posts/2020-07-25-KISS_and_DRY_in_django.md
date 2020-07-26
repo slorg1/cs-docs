@@ -132,7 +132,7 @@ my_dict = {}
 values = (("a", 1,), ("a", 2), ("a", 30,), ("b", 32,), ("b", 40),)
 current_label = None
 
-for label, v, in itertools.chain(values, (None,None,:
+for label, v, in itertools.chain(values, (None, 0,),):
 
 	if current_label != label:
 		if current_label != None: # for the example we assume that the labels cannot be None
@@ -147,5 +147,5 @@ if current_label != None:
 	my_dict[current_label] = sum_of_values
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIxNzk0NTUsLTI3NjQ4NjA3NV19
+eyJoaXN0b3J5IjpbLTE1MzAzMDE2MTEsLTI3NjQ4NjA3NV19
 -->
