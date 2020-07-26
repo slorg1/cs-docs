@@ -135,9 +135,9 @@ import itertools
 # same initializations cut for conciseness
 
 for label, v, in itertools.chain(
-								values, 
-								(None, 0,), # flush the buffer
-								):
+					values, 
+					(None, 0,), # flush the buffer
+					):
 
 	if current_label != label:
 		if current_label != None:
@@ -151,5 +151,5 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODE1NDEzNTcsLTI3NjQ4NjA3NV19
+eyJoaXN0b3J5IjpbLTE2NjM0ODY0MDUsLTI3NjQ4NjA3NV19
 -->
