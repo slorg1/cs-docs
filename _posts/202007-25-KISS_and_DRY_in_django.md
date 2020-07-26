@@ -33,15 +33,16 @@ class StringUtils:
 	@staticmethod
     def to_stripped_lowercase_string(input_value):
     """
-	    Given any input value, returns a string lowercased and without whitespaces at the beginning and at the end.
+	    Given any input value, returns a string lowercased and without 
+	    whitespaces at the beginning and at the end.
     """
 	   return str(input_value).lower().strip() 
 ```
-But wait, this will turn any value into a string.
-
 Now, we do quick search through the project for anything that resembles that e.g. grep for `.lower().strip()` and replace it nicely with `StringUtils.input_value(my_value)`.
 
- :heartpulse: Hurray! We centralized code and we obviously did not repeat ourself!
+ :heartpulse: Hurray! Look at us! We centralized code and we obviously did not repeat ourself!
+
+But wait, this will turn any value into a string... right?
 
 :scream_cat:**GOTCHA included**:scream_cat:
 You will notice that in our specific case, we made a key assumption and we passed it on to the utility clas:
@@ -53,8 +54,8 @@ True, the code will work and will certainly not crash as we force convert the va
 :point_right: It also means that `None` will turn to `"None"` *ooops*  :broken_heart:
 
 You could argue 2 things:
-1. this is on purpose, then we are all set! :100:
-2. this was an original bug and we can fix it in 1 place and everyone gets the benefit   :revolving_hearts:
+[x] this is on purpose, then we are all set!
+- [x] this was an original bug and we can fix it in 1 place and everyone gets the benefit   :revolving_hearts:
 
 That is true and in any cases what did we gain:
 3. a centralized way of converting data
@@ -62,6 +63,5 @@ That is true and in any cases what did we gain:
 5. a centralized way of changing how the data is converted
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDMyNTg3NjQsLTE3NTY1NTM2NDddfQ
-==
+eyJoaXN0b3J5IjpbMTg3NTI0OTUwOSwtMTc1NjU1MzY0N119
 -->
