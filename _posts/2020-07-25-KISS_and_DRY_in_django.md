@@ -122,13 +122,30 @@ for label, v, in values:
 	sum_of_values += v
 
 # we need to deal with "b" now...
-my_dict[current_label] = sum_of_values
-current_label = label
-sum_of_values = 0
+if current_label != None:
+	my_dict[current_label] = sum_of_values
+```
+But that is not DRY: we repeated ourselves.
+How about now?
+```python
+my_dict = {}
+values = (("a", 1,), ("a", 2), ("a", 30,), ("b", 32,), ("b", 40),)
+current_label = None
 
-sum_of_values += v
+for label, v, in itertools.chain(values, (None,None,:
 
+	if current_label != label:
+		if current_label != None: # for the example we assume that the labels cannot be None
+			my_dict[current_label] = sum_of_values
+		current_label = label
+		sum_of_values = 0
+
+	sum_of_values += v
+
+# we need to deal with "b" now...
+if current_label != None:
+	my_dict[current_label] = sum_of_values
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MjA0NjQxNywtMjc2NDg2MDc1XX0=
+eyJoaXN0b3J5IjpbMzIxNzk0NTUsLTI3NjQ4NjA3NV19
 -->
