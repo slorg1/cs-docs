@@ -14,8 +14,8 @@ DRY is an old enough concept. It stands _Do not Repeat Yourself_ and we have all
 Building upon the basis of [KISS](#KISS) it is easy to understand that to keep our projects simple it helps to keep them small (or at least not ...)
 DRY is more of a mindset than a precise set of rule. It is easy to isolate it at the low level. We call all recognize a simple pattern when it happens in a piece of code (method) or across a couple pieces of code.
 ##
-## Method
-### A grand classic are utility classes.
+## Making Methods
+### A grand classic: utility classes
 As an example, we can think of string manipulation. How many time do we write the same or similar code at API boundaries. We all know the best practices and we cleanse data like we mean it.
 Instead of replicating these lines of code:
 
@@ -42,8 +42,14 @@ we could assume (or know) that `my_value` could not be `None`.
 
 So, what? It works! No, crash. :see_no_evil:
 True, the code will work and will certainly not crash as we force convert the value as a string. What this means is that `.lower().strip()` will always work against a string: peachy!
-:point_right: It also means that `None` will turn to `"None"` *ooops*
+
+:point_right: It also means that `None` will turn to `"None"` *ooops*  :broken_heart:
+
+You could argue 2 things:
+1. this is on purpose
+2. this was an original bug
+
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA5NTc3MTI1LC0xNzU2NTUzNjQ3XX0=
+eyJoaXN0b3J5IjpbMTU2OTk1OTI1MSwtMTc1NjU1MzY0N119
 -->
