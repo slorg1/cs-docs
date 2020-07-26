@@ -1,10 +1,11 @@
 # Code booboos
-We have all made mistakes and the solution is not to worry about them, it to promote healthy habits.
+We all make mistakes and the key is not to worry about them: it to promote healthy habits so they either do not happen again or they are easy to fix when they happen.
+Is that not the dream :sparkle:? How is actually living it?
 
 # KISS it better
 
 # Keep it DRY...
 ...and it shall not get infected :stuck_out_tongue:
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMwMzc3MjMwNl19
+eyJoaXN0b3J5IjpbNDEzMTM4OTQ0XX0=
 -->
