@@ -66,6 +66,7 @@ In any case. what did we gain:
 2. a centralized way of changing how the data is converted
 3. we **abstracted** the way data is converted. Now we do not think about **HOW** to lowercase and strip whitespace from a string, we think about **WHAT** what want to do: the transformation
 
+## 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MjE4MjM3LC0yNzY0ODYwNzVdfQ==
+eyJoaXN0b3J5IjpbLTIwMDg2NTcxOSwtMjc2NDg2MDc1XX0=
 -->
