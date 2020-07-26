@@ -110,15 +110,17 @@ This is a technic that I call "flushing the buffer". It is used when iterating o
 my_dict = {}
 values = (("a", 1,), ("a", 2), ("a", 30,), ("b", 32,), ("b", 40),)
 current_label = None
+
 for label, v, in values:
 
 	if current_label != label:
-		my_dict[current_label] = v
+		if current_label != None: # for the sake of the example we assume that the labels cannot be None
+			my_dict[current_label] = v
 		current_label = label
 		sum_of_values = 0
 
 	sum_of_values += v
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Nzg5MDkyMjAsLTI3NjQ4NjA3NV19
+eyJoaXN0b3J5IjpbNDc0ODg1MzEzLC0yNzY0ODYwNzVdfQ==
 -->
