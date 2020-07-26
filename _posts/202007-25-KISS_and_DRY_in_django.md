@@ -54,14 +54,15 @@ True, the code will work and will certainly not crash as we force convert the va
 :point_right: It also means that `None` will turn to `"None"` *ooops*  :broken_heart:
 
 You could argue 2 things:
-[x] this is on purpose, then we are all set!
+- [x] this is on purpose: we are all set!
 - [x] this was an original bug and we can fix it in 1 place and everyone gets the benefit   :revolving_hearts:
 
-That is true and in any cases what did we gain:
-3. a centralized way of converting data
-4. we abstracted the way data is converted: now we do not know **how** to lowercase and strip whitespace from a string
-5. a centralized way of changing how the data is converted
+In any cases what did we gain:
+1. a centralized way of converting data
+2. we abstracted the way data is converted: now we do not think about **how** to lowercase and strip whitespace from a string, we think about transformation
+3. a centralized way of changing how the data is converted
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3NTI0OTUwOSwtMTc1NjU1MzY0N119
+eyJoaXN0b3J5IjpbLTEzNDAwNjQ4MDcsLTE3NTY1NTM2NDddfQ
+==
 -->
