@@ -102,7 +102,9 @@ In any case. what did we gain:
 > - When centralizing code, we abstract the details of implementation (**HOW**) and focus on the outcome (**WHAT**)
 > - Centralizing code allows us to share bugs and to share code fixes :smiley:
 > - Be careful, centralizing code also centralizes the assumptions
-## "Flushing the buffer"
+
+### "Flushing the buffer"
+This is a tech
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxODgwMjA0NywtMjc2NDg2MDc1XX0=
+eyJoaXN0b3J5IjpbNDcxODA2NjYzLC0yNzY0ODYwNzVdfQ==
 -->
