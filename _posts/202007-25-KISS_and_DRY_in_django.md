@@ -10,9 +10,10 @@ I will not pretent to know it all (I do not), it only share here a few fondament
 # Keep it DRY...
 ...and it shall not get infected :stuck_out_tongue:
 
-DRY is an old enough concept. It stands Do not Repeat Yourself and we have all heard it one way or the other. It is easy to centralize your code in classes, objects, methods, functions etc. and reuse it but is that really the essence of DRY?
+DRY is an old enough concept. It stands _Do not Repeat Yourself_ and we have all heard it one way or the other. It is easy to centralize your code in classes, objects, methods, functions etc. and reuse it but is that really the essence of DRY?
+Building upon the basis of [KISS](#KISS) it is easy to understand that to keep our projects simple it helps to keep them small (or at least not 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzODczMzIyNF19
+eyJoaXN0b3J5IjpbMzkzMjAyMjA1XX0=
 -->
