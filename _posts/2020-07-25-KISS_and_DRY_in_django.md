@@ -1,5 +1,5 @@
 ---
-title: Code booboos... no more
+title: Code booboos... no mo'
 ---
 # {{page.title}}
 We all make mistakes and the key is not to worry about them: it is to promote healthy habits so they either do not happen again or they are easy to fix when they happen.
@@ -29,17 +29,17 @@ We will use a library or framework that will do a solid 80%+ of the work. Then, 
 
 ```python
 class StringUtils:
-	"""
-		Utility centralizing common string manipulations.
-	"""
+    """
+        Utility centralizing common string manipulations.
+    """
 
-	@staticmethod
+    @staticmethod
     def to_stripped_lowercase_string(input_value):
-    """
-	    Given any input value, returns a string lowercased and without 
-	    whitespaces at the beginning and at the end.
-    """
-	   return str(input_value).lower().strip() 
+        """
+            Given any input value, returns a string lowercased and without 
+            whitespaces at the beginning and at the end.
+        """
+        return str(input_value).lower().strip() 
 ```
 Now, we do quick search through the project for anything that resembles that e.g. grep for `.lower().strip()` and replace it nicely with `StringUtils.input_value(my_value)`.
 
@@ -69,29 +69,29 @@ Here are 2 examples highlighting key assumptions:
 
 Honour the `None`
 ```python
-	...
+    ...
 
-	@staticmethod
+    @staticmethod
     def to_stripped_lowercase_string(input_value):
-    """
-	    Given any input value, returns a string lowercased and without 
-	    whitespaces at the beginning and at the end.
-    """
-	   return str(input_value).lower().strip() if input_value != "" else ""
+        """
+            Given any input value, returns a string lowercased and without 
+            whitespaces at the beginning and at the end.
+        """
+        return str(input_value).lower().strip() if input_value != "" else ""
 ```
 
 Always returns a string
 ```python
-	...
+    ...
 
-	@staticmethod
+    @staticmethod
     def to_stripped_lowercase_string(input_value):
-    """
-	    Given any input value, returns a string lowercased and without 
-	    whitespaces at the beginning and at the end.
-		Returns `None` is the input is `None`
-    """
-	   return str(input_value).lower().strip() if input_value is not None else None
+        """
+            Given any input value, returns a string lowercased and without 
+            whitespaces at the beginning and at the end.
+            Returns `None` is the input is `None`
+        """
+        return str(input_value).lower().strip() if input_value is not None else None
 ```
 In any case. what did we gain:
 1. a centralized way of converting data
@@ -114,18 +114,18 @@ current_label = None
 
 for label, v, in values:
 
-	if current_label != label:
-		# for the example we assume that the labels cannot be None
-		if current_label != None: 
-			my_dict[current_label] = sum_of_values
-		current_label = label
-		sum_of_values = 0
+    if current_label != label:
+        # for the example we assume that the labels cannot be None
+        if current_label != None: 
+            my_dict[current_label] = sum_of_values
+        current_label = label
+        sum_of_values = 0
 
-	sum_of_values += v
+    sum_of_values += v
 
 # we need to deal with "b" now...
 if current_label != None:
-	my_dict[current_label] = sum_of_values
+    my_dict[current_label] = sum_of_values
 ```
 But that is not DRY: we repeated ourselves.
 How about now?
@@ -139,13 +139,13 @@ for label, v, in itertools.chain(
                              (None, 0,), # flush the buffer
                              ):
 
-	if current_label != label:
-		if current_label != None:
-			my_dict[current_label] = sum_of_values
-		current_label = label
-		sum_of_values = 0 # this is our buffer
+    if current_label != label:
+        if current_label != None:
+            my_dict[current_label] = sum_of_values
+        current_label = label
+        sum_of_values = 0 # this is our buffer
 
-	sum_of_values += v
+    sum_of_values += v
 ```
 While this allows for no code duplication, it is a little _harder_ to read than the previous version.
 > ### Takeaways
