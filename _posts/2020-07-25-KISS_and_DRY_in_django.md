@@ -104,7 +104,7 @@ In any case. what did we gain:
 > - Be careful, centralizing code also centralizes the assumptions
 
 ### "Flushing the buffer"
-This is a tech
+This is a technic that I call "flushing the buffer". It is used when iterating over iterables and an operations needs to happen
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcxODA2NjYzLC0yNzY0ODYwNzVdfQ==
+eyJoaXN0b3J5IjpbLTM5OTE5NjU4NCwtMjc2NDg2MDc1XX0=
 -->
