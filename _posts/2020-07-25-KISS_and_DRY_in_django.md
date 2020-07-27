@@ -6,7 +6,7 @@ We all make mistakes, the key is not to get parallelize by them and to look for 
 
 Is that not the dream :sparkles:? But who is _actually_ living it?
 
-I will not pretend to know it all (I do not), I only share here a few fundamental tips that I have ~~learnt the hard way~~ helped me over the years.
+I will not pretend to know it all (I do not), I only share here a few fundamental tips that ~~I have learnt the hard way~~ helped me over the years.
 
 # KISS it better
 
@@ -151,6 +151,6 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNTE4Mzc3NCwtMjc2MTk5NjI5LC0xMD
-Y0MjYzMTcsLTE2NjM0ODY0MDUsLTI3NjQ4NjA3NV19
+eyJoaXN0b3J5IjpbNTkyMDMyMjkwLC0yNzYxOTk2MjksLTEwNj
+QyNjMxNywtMTY2MzQ4NjQwNSwtMjc2NDg2MDc1XX0=
 -->
