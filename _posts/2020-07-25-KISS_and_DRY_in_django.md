@@ -2,7 +2,7 @@
 title: Code boo-boos... no mo'
 ---
 # {{page.title}}
-We all make mistakes and the key is not to worry about them: it is to promote healthy habits so they either do not happen again or they are easy to fix when they happen.
+We all make mistakes, the key is not to get parallelize by them and to look for ways to promote healthy habits: so they either do not happen again or they are easy to fix when they happen.
 
 Is that not the dream :sparkles:? But who is _actually_ living it?
 
@@ -151,6 +151,6 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3Mzk0NTY2MiwtMjc2MTk5NjI5LC0xMD
+eyJoaXN0b3J5IjpbLTMyNTE4Mzc3NCwtMjc2MTk5NjI5LC0xMD
 Y0MjYzMTcsLTE2NjM0ODY0MDUsLTI3NjQ4NjA3NV19
 -->
