@@ -1,5 +1,5 @@
 ---
-title: Code booboos... no mo'
+title: Code boo-boos... no mo'
 ---
 # {{page.title}}
 We all make mistakes and the key is not to worry about them: it is to promote healthy habits so they either do not happen again or they are easy to fix when they happen.
@@ -151,6 +151,6 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3NjE5OTYyOSwtMTA2NDI2MzE3LC0xNj
-YzNDg2NDA1LC0yNzY0ODYwNzVdfQ==
+eyJoaXN0b3J5IjpbMTc3Mzk0NTY2MiwtMjc2MTk5NjI5LC0xMD
+Y0MjYzMTcsLTE2NjM0ODY0MDUsLTI3NjQ4NjA3NV19
 -->
