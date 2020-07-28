@@ -19,7 +19,7 @@ It is easy enough to centralize your code (in classes, objects, methods, functio
 
 Building upon the basis of [KISS](#KISS), it is easy to understand that to keep our projects simple, it helps to keep them small (or at least not with scattered different versions of the same code).
 
-DRY is a far reaching mindset, not a small set of precise rules. It is easy to apply it at the low/descreet level. We all recognize a simple pattern when it happens in a piece of code (method) or across a couple of pieces of code.
+DRY is a far reaching mindset, not a small set of precise rules. It is easy to apply it at the low/descreet level. We all recognize a simple pattern when it happens in a piece of code (method) or across a couple of pieces of code. What is harder and when it really shines is when applied on across large chunk of software as a systematic architecture 
 ##
 ## Making Methods
 ### A grand classic: utility classes
@@ -155,7 +155,7 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTM4MTMxODksLTE4MDUyODE4NDQsLT
-gzNzA1MzUzNSw1OTIwMzIyOTAsLTI3NjE5OTYyOSwtMTA2NDI2
-MzE3LC0xNjYzNDg2NDA1LC0yNzY0ODYwNzVdfQ==
+eyJoaXN0b3J5IjpbMjA2ODA1Mjk5LC0xODA1MjgxODQ0LC04Mz
+cwNTM1MzUsNTkyMDMyMjkwLC0yNzYxOTk2MjksLTEwNjQyNjMx
+NywtMTY2MzQ4NjQwNSwtMjc2NDg2MDc1XX0=
 -->
