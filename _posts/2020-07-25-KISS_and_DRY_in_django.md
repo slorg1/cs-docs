@@ -17,7 +17,7 @@ DRY is an old enough concept, it stands _Do not Repeat Yourself_. We have all he
 
 It is easy enough to centralize your code (in classes, objects, methods, functions etc.) and reuse it but is that _really_ the essence of DRY?
 
-Building upon the basis of [KISS](#KISS) it is easy to understand that to keep our projects simple it helps to keep them small (or at least not ...)
+Building upon the basis of [KISS](#KISS), it is easy to understand that to keep our projects simple, it helps to keep them small (or at least not ...)
 DRY is more of a mindset than a precise set of rule. It is easy to isolate it at the low level. We call all recognize a simple pattern when it happens in a piece of code (method) or across a couple of pieces of code.
 ##
 ## Making Methods
@@ -154,7 +154,7 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDUyODE4NDQsLTgzNzA1MzUzNSw1OT
-IwMzIyOTAsLTI3NjE5OTYyOSwtMTA2NDI2MzE3LC0xNjYzNDg2
-NDA1LC0yNzY0ODYwNzVdfQ==
+eyJoaXN0b3J5IjpbLTE0ODc0NTY0MzQsLTE4MDUyODE4NDQsLT
+gzNzA1MzUzNSw1OTIwMzIyOTAsLTI3NjE5OTYyOSwtMTA2NDI2
+MzE3LC0xNjYzNDg2NDA1LC0yNzY0ODYwNzVdfQ==
 -->
