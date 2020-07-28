@@ -21,7 +21,7 @@ Building upon the basis of [KISS](#KISS), it is easy to understand that to keep 
 
 DRY is a far reaching mindset, not a small set of precise rules. It is easy to apply it at the low/descreet level. We all recognize a simple pattern when it happens in a piece of code (method) or across a couple of pieces of code. What is harder and when it really shines is when applying it as a systemic thought process: whether across large chunk of software as a systematic architecture or in business or in your day to day personal life.
 
-We will discuss here how to apply it at the descreet level and 
+We will discuss here how to apply it at the descreet level and learn to recognize gains and gotchas. We, then, will skip to the 10000-foot view to touch  the generic mindset.
 
 ## Making Methods
 ### A grand classic: utility classes
@@ -157,7 +157,7 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwMjkyOTAxLC0xODA1MjgxODQ0LC04Mz
+eyJoaXN0b3J5IjpbLTI1NzU4OTg3LC0xODA1MjgxODQ0LC04Mz
 cwNTM1MzUsNTkyMDMyMjkwLC0yNzYxOTk2MjksLTEwNjQyNjMx
 NywtMTY2MzQ4NjQwNSwtMjc2NDg2MDc1XX0=
 -->
