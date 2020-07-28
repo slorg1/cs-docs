@@ -13,7 +13,7 @@ I will not pretend to know it all (I do not), I only share here a few fundamenta
 # Keep it DRY...
 ...and it shall not get infected :stuck_out_tongue:
 
-DRY is an old enough concept, it stands _Do not Repeat Yourself_, more [here](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)). We have all heard it one way or the other.
+DRY is an old enough concept, it stands _Do not Repeat Yourself_, more [here](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself). We have all heard it one way or the other.
 
 It is easy enough to centralize your code (in classes, objects, methods, functions etc.) and reuse it but is that _really_ the essence of DRY?
 
@@ -157,8 +157,8 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjc1NjEwMDgsLTg1MTUxMTE0NiwtMT
-gwNTI4MTg0NCwtODM3MDUzNTM1LDU5MjAzMjI5MCwtMjc2MTk5
-NjI5LC0xMDY0MjYzMTcsLTE2NjM0ODY0MDUsLTI3NjQ4NjA3NV
-19
+eyJoaXN0b3J5IjpbMTUzMDc0MjY0MSwtODUxNTExMTQ2LC0xOD
+A1MjgxODQ0LC04MzcwNTM1MzUsNTkyMDMyMjkwLC0yNzYxOTk2
+MjksLTEwNjQyNjMxNywtMTY2MzQ4NjQwNSwtMjc2NDg2MDc1XX
+0=
 -->
