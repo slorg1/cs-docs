@@ -8,7 +8,6 @@ Is that not the dream :sparkles:? But who is _actually_ living it?
 
 I will not pretend to know it all (I do not), I only share here a few fundamental tips that ~~I have learnt the hard way~~ helped me over the years.
 
-# KISS it better
 
 # Keep it DRY...
 ...and it shall not get infected :stuck_out_tongue:
@@ -157,8 +156,8 @@ While this allows for no code duplication, it is a little _harder_ to read than 
 > ### Takeaways
 > - Centralizing code can make it harder to read
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzMDc0MjY0MSwtODUxNTExMTQ2LC0xOD
-A1MjgxODQ0LC04MzcwNTM1MzUsNTkyMDMyMjkwLC0yNzYxOTk2
-MjksLTEwNjQyNjMxNywtMTY2MzQ4NjQwNSwtMjc2NDg2MDc1XX
-0=
+eyJoaXN0b3J5IjpbLTIxMTY0NjIzOTcsMTUzMDc0MjY0MSwtOD
+UxNTExMTQ2LC0xODA1MjgxODQ0LC04MzcwNTM1MzUsNTkyMDMy
+MjkwLC0yNzYxOTk2MjksLTEwNjQyNjMxNywtMTY2MzQ4NjQwNS
+wtMjc2NDg2MDc1XX0=
 -->
