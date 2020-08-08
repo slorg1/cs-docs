@@ -2,9 +2,10 @@
 
 
 ---
+title: KISS it better
 ---
-# KISS it better
+# {{page.title}}
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDI5ODQ0MTJdfQ==
+eyJoaXN0b3J5IjpbLTIwODg5MDAxNDldfQ==
 -->
