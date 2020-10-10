@@ -85,7 +85,7 @@ function buildName(
 
 A thought that was shared to me by Tony Deigh (CTO of Jobcase) that stuck in my mind: "Code is read more than it is executed".
 
-In context, it meant that optimizing for execution is important but it is key to remember that code is read by other humans and need to remain human readible.
+In context, it meant that optimizing for execution is important but it is key to remember that code is read by other humans and need to remain human readable.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NjgyMDAyN119
+eyJoaXN0b3J5IjpbMTYxODY2MTU3MV19
 -->
