@@ -5,18 +5,18 @@ title: To be or to be... the existential crisis of the parameters
 
 What's the difference between these declarations?
 
-2 in Python:
+Python:
 ```
     def create_new_user(first_name, last_name, avatar=None,):
         ...
 ```
-or
+vs
 ```
     def create_new_user(first_name=None, last_name=None, avatar=None,):
         ...
 ```
 
-2 in TypeScript:
+TypeScript:
 ```
 interface User{
     firstName: string
@@ -24,7 +24,7 @@ interface User{
     avatar?
 }
 ```
-or
+vs
 ```
 interface User{
     firstName: string
@@ -43,33 +43,15 @@ interface User{
     </a>
 </div>
 
-# Wait a second... parameter or argument?
-You may have seen these 2 concepts used interchangeably in the past. They are technically expressing 2 different "states" in the life-cycle of the same "thing".
+# A new understanding: from the ground up in 2s
 
-The parameter is the name of the variable set at function or method declaration/definition time.
-
-```
-def my_function(parameter_1, parameter_2):
-    ...
-```
-
-The argument is the value that you pass the function/method at invocation time.
-
-```
-my_function(
-    "argument 1",
-    "argument 2",
-):
-    ...
-```
-
-# Kinds of parameters
-The kinds of parameters covered by this post:
+## Kinds of parameters
+The kinds of parameters discussed in this post are:
 * positional parameter: the parameter expects the argument to be given at the matching position
 * keyword parameter: the parameter expects the argument to be given using the matching key
 * optional/default parameter: the parameter expects the argument to be given using the matching key or omitted
 
-At a high-level, the other kinds of parameters are semantic declension of this subset.
+I am glossing over the other kinds of parameters as at a high-level, they are declension of this subset applied to different use cases.
 
 In Python:
 ```
@@ -105,6 +87,32 @@ function buildName(
 }
 ```
 
+## Wait a second... parameter or argument?
+You may have seen these 2 concepts used interchangeably in the past. They are technically expressing 2 different "states" in the life-cycle of the same "thing".
+
+The parameter is the name of the variable set at function or method declaration/definition time.
+
+```
+def my_function(parameter_1, parameter_2):
+    ...
+```
+
+The argument is the value that you pass the function/method at invocation time.
+
+```
+my_function(
+    "argument 1",
+    "argument 2",
+):
+    ...
+```
+
+## What do I mean by semantic meaning?
+
+The semantic meaning is the meaning (from Greek _sēmantikos_ 'significant') of "something" has based on it relationship with others. More on the definition [here](https://www.merriam-webster.com/dictionary/semantics).
+
+The salient point here is: what does the declaration of a variable mean beyond the syntactic and computational correctness?
+
 ***Ready?***
 <div  style="width:60%;margin-left: auto; margin-right: auto">
     <p style="margin-left: auto; margin-right: auto; text-align: center">"You have to let it all go. fear, doubt, and disbelief. Free your mind." - Morpheus</p>
@@ -123,7 +131,7 @@ function buildName(
 
 A thought that was shared to me by Tony Deigh (CTO of Jobcase) that stuck in my mind: "Code is read more than it is executed".
 
-In context, it meant that optimizing for execution is important but it is key to remember that code is read by other humans and need to remain human-readable.
+In context, it meant that optimizing for execution is important but it is key to remember that code is read by other humans (mostly) and need to remain human-readable.
 
 # Nota __very__ Bene
 This post offers a stance on the semantic significance of the different kinds of parameters available in various languages (the same logic applies to members in JS/TS as the same type declination exists).
