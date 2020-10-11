@@ -77,7 +77,7 @@ interface Props{
 ```
 In the same way in TS as a function
 ```
-function buildName(
+function myFunction(
     pos_param_1: string,
     pos_param_2: string,
     default_param_1=1,
@@ -109,7 +109,7 @@ my_function(
 
 ## What do I mean by semantic meaning?
 
-The semantic meaning is the meaning (from Greek _sēmantikos_ 'significant') of "something" has based on it relationship with others. More on the definition [here](https://www.merriam-webster.com/dictionary/semantics).
+The semantic meaning is the meaning (from Greek _sēmantikos_ 'significant') of "something" has based on its relationship with others. More on the definition [here](https://www.merriam-webster.com/dictionary/semantics).
 
 The salient point here is: what does the declaration of a variable mean beyond the syntactic and computational correctness?
 
