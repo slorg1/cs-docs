@@ -123,9 +123,12 @@ function buildName(
 
 A thought that was shared to me by Tony Deigh (CTO of Jobcase) that stuck in my mind: "Code is read more than it is executed".
 
-In context, it meant that optimizing for execution is important but it is key to remember that code is read by other humans and need to remain human readable.
+In context, it meant that optimizing for execution is important but it is key to remember that code is read by other humans and need to remain human-readable.
 
 # Nota __very__ Bene
 This post offers a stance on the semantic significance of the different kinds of parameters available in various languages (the same logic applies to members in JS/TS as the same type declination exists).
 
 This stance reflects my personal approach to the matter.
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTc1ODE4MzYxOV19
+-->
