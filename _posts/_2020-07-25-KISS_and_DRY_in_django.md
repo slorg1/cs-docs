@@ -18,9 +18,9 @@ It is easy enough to centralize your code (in classes, objects, methods, functio
 
 Building upon the basis of [KISS](#KISS), it is easy to understand that to keep our projects simple, it helps to keep them small (or at least not with scattered different versions of the same code).
 
-DRY is a far reaching mindset, not a small set of precise rules. It is easy to apply it at the low/descreet level. We all recognize a simple pattern when it happens in a piece of code (method) or across a couple of pieces of code. What is harder and when it really shines is when applying it as a systemic thought process: whether across large chunk of software as a systematic architecture or in business or in your day to day personal life.
+DRY is a far reaching mindset, not a small set of precise rules. It is easy to apply it at the low/discreet level. We all recognize a simple pattern when it happens in a piece of code (method) or across a couple of pieces of code. What is harder and when it really shines is when applying it as a systemic thought process: whether across large chunk of software as a systematic architecture or in business or in your day to day personal life.
 
-We will discuss here how to apply it at the descreet level and learn to recognize gains and gotchas to understand the Software Engineering mindset. Building upon our SE understanding, we will skip to the 10k-foot view to touch upon the generic mindset.
+We will discuss here how to apply it at the discreet level and learn to recognize gains and gotchas to understand the Software Engineering mindset. Building upon our SE understanding, we will skip to the 10k-foot view to touch upon the generic mindset.
 
 ## Making Methods
 ### A grand classic: utility classes
@@ -41,10 +41,10 @@ class StringUtils:
     @staticmethod
     def to_stripped_lowercase_string(input_value):
         """
-            Given any input value, returns a string lowercased and without 
+            Given any input value, returns a string lowercased and without
             whitespaces at the beginning and at the end.
         """
-        return str(input_value).lower().strip() 
+        return str(input_value).lower().strip()
 ```
 Now, we do quick search through the project for anything that resembles that e.g. grep for `.lower().strip()` and replace it nicely with `StringUtils.input_value(my_value)`.
 
@@ -79,7 +79,7 @@ Honour the `None`
     @staticmethod
     def to_stripped_lowercase_string(input_value):
         """
-            Given any input value, returns a string lowercased and without 
+            Given any input value, returns a string lowercased and without
             whitespaces at the beginning and at the end.
         """
         return str(input_value).lower().strip() if input_value != "" else ""
@@ -92,7 +92,7 @@ Always returns a string
     @staticmethod
     def to_stripped_lowercase_string(input_value):
         """
-            Given any input value, returns a string lowercased and without 
+            Given any input value, returns a string lowercased and without
             whitespaces at the beginning and at the end.
             Returns `None` is the input is `None`
         """
@@ -121,7 +121,7 @@ for label, v, in values:
 
     if current_label != label:
         # for the example we assume that the labels cannot be None
-        if current_label != None: 
+        if current_label != None:
             my_dict[current_label] = sum_of_values
         current_label = label
         sum_of_values = 0
@@ -140,7 +140,7 @@ import itertools
 # same initializations cut for conciseness
 
 for label, v, in itertools.chain(
-                             values, 
+                             values,
                              (None, 0,), # flush the buffer
                              ):
 
