@@ -168,13 +168,13 @@ Let's break down what we are told 1 parameter at a time:
 
 # Acknowledgement
 
-Before closing on the subject, I would like to bring up the key counter arguments that I balance constantly in my mind assessing which strategy works best.
+Before closing on the subject, I would like to bring up the key counter-arguments that I balance constantly in my mind assessing which strategy works best.
 
 The argument goes as follows:
 
 > I use keyword arguments _**systematically**_ to make my code more maintainable
 
-I have seen 2 variation of how it comes to life.
+I have seen 2 variations of how it comes to life.
 
 ### Some exclusively use it at invocation time and declare the parameters with a clear semantic meaning.
 ```python
@@ -221,8 +221,8 @@ my_function(
     * the task ordering arguments is no longer applicable
 
 **con**
-* it is hard (if at all possible) to set sensible default
-* the code in the function need to handle the possible combinations (permutations do not matter :stuck_out_tongue_winking_eye:) of supplied arguments: lead to lots of defensive programming or hoping for the best and dealing with consequences
+* it is hard (if at all possible) to set sensible defaults
+* the code in the function needs to handle the possible combinations (permutations do not matter:stuck_out_tongue_winking_eye:) of supplied arguments: lead to lots of defensive programming or hoping for the best and dealing with consequences
 * the arguments lose all semantic meaning: without reading the body of the function you cannot tell if an argument is needed or not
 
 Now, you are in the know.
