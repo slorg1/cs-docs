@@ -168,7 +168,7 @@ Let's break down what the developer of this class is telling us 1 member/paramet
 
 ## Takeaways
 
-The code is certainly instructions for the **machine** but it is also the embodiment of a **developer**'s thoughts and approach to a solution. It is a message left by the author for the future. Whether it is during the code review process, the maintenance process or simply leveraging the existing modules, **we**, the developers, (including the original author) will have to make sense of the code as fast and as unequivocally as possible. Our best case scenario is to be able to use or to update the functionality built without having to deep dive into code every time.
+The code is certainly instructions for the **machine** but it is also the embodiment of a **developer**'s thoughts and approach to a solution. It is a message left by the author for the future. Whether it is during the code review process, the maintenance process or simply leveraging the existing modules, **we**, the developers, (including the original author) will have to make sense of the code as fast and as unequivocally as possible. Our best-case scenario is to be able to use or to update the functionality built without having to deep dive into code every time.
 
 # Acknowledgement
 
