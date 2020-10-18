@@ -130,7 +130,7 @@ The salient point here is: what does the declaration of a variable mean beyond t
 
 A thought that was shared to me by Tony Deigh (CTO of Jobcase) that stuck in my mind: "Code is read more than it is executed".
 
-It meant that optimizing for execution is important but it is key to remember that code is read by other humans (mostly) and need to remain human-readable.
+It means that optimizing for execution is important but it is key to remember that code is read by other humans (mostly) and need to remain human-readable.
 
 ## Breaking it down
 
@@ -146,7 +146,7 @@ def my_function(
 ):
     ...
 ```
-Let's break down what we are told 1 parameter at a time:
+Let's break down what the developer of this function is telling us 1 parameter at a time:
 * `pos_param_1`
 * `kw_param_1`
 * `optional_param_1`
@@ -161,10 +161,14 @@ interface Props{
 }
 ```
 
-Let's break down what we are told 1 parameter at a time:
+Let's break down what the developer of this class is telling us 1 member/parameter at a time:
 * `kw_param_1`:
 * `kw_param_2`:
 * `optional_param_1`:
+
+## Takeaways
+
+The code is certainly instructions for the **machine** but it is also the embodiment of a **developer**'s thoughts and approach to a solution. It is a message left by the author for the future. Whether it is during the code review process, the maintenance process or simply leveraging the existing modules, **we**, the developers, (including the original author) will have to make sense of the code as fast and as unequivocally as possible. Our best case scenario is to be able to use or to update the functionality built without having to deep dive into code every time.
 
 # Acknowledgement
 
@@ -227,7 +231,9 @@ my_function(
 
 Now, you are in the know.
 <p align="center">
-Choose your path, do not settle
+    <strong>
+        Choose your path, do not settle
+    </strong>
 </p>
 
 # Nota __very__ Bene

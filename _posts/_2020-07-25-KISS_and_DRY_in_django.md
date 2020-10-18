@@ -155,9 +155,3 @@ for label, v, in itertools.chain(
 While this allows for no code duplication, it is a little _harder_ to read than the previous version.
 > ### Takeaways
 > - Centralizing code can make it harder to read
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTY0NjIzOTcsMTUzMDc0MjY0MSwtOD
-UxNTExMTQ2LC0xODA1MjgxODQ0LC04MzcwNTM1MzUsNTkyMDMy
-MjkwLC0yNzYxOTk2MjksLTEwNjQyNjMxNywtMTY2MzQ4NjQwNS
-wtMjc2NDg2MDc1XX0=
--->
