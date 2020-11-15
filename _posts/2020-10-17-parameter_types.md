@@ -88,16 +88,16 @@ function myFunction(
 ```
 
 ## Wait a second... parameter or argument?
-You may have seen these 2 concepts used interchangeably in the past. They are technically expressing 2 different "states" in the life-cycle of the same "thing".
+You may have seen these 2 concepts used interchangeably in the past. They technically express 2 different "states" in the life-cycle of the same "thing".
 
-The parameter is the name of the variable set at function or method declaration/definition time.
+The parameter is the name of the variable at function or method declaration/definition time.
 
 ```python
 def my_function(parameter_1, parameter_2):
     ...
 ```
 
-The argument is the value that you pass the function/method at invocation time.
+The argument is the value (or reference) that you pass the function/method at invocation time.
 
 ```python
 my_function(
@@ -108,7 +108,7 @@ my_function(
 
 ## What do I mean by semantic meaning?
 
-The semantic meaning is the meaning (from Greek _sēmantikos_ 'significant') of "something" has based on its relationship with others. More on the definition [here](https://www.merriam-webster.com/dictionary/semantics).
+The semantic meaning is the meaning (from Greek _sēmantikos_ 'significant') "something" has based on its relationship with others. The dictionary reference for the definition is [here](https://www.merriam-webster.com/dictionary/semantics).
 
 The salient point here is: what does the declaration of a variable mean beyond the syntactic and computational correctness?
 
@@ -130,7 +130,7 @@ The salient point here is: what does the declaration of a variable mean beyond t
 
 A thought that was shared to me by Tony Deigh (CTO of Jobcase) that stuck in my mind: "Code is read more than it is executed".
 
-It means that optimizing for execution is important but it is key to remember that code is read by other humans (mostly) and need to remain human-readable.
+I keep it as a reminder that correctness (it does what it is supposed to do) and optimization for execution are important and it is also key to remember that code is read by other humans (mostly). As a result, it needs to remain human-readable.
 
 ## Breaking it down
 
@@ -146,11 +146,15 @@ def my_function(
 ):
     ...
 ```
-Let's break down what the developer of this function is telling us 1 parameter at a time:
-* `pos_param_1`
-* `kw_param_1`
-* `optional_param_1`
-* `default_param_1`
+Let's break down what the developer of this function is telling:
+* `pos_param_1`: this parameter is **required** and its placement in the sequence in the parameter's list is **likely important**
+* `kw_param_1`: this parameter is **required** and its placement in the sequence in the parameter's list is **meaningless**
+* `optional_param_1`: this parameter is **optional**, its placement in the sequence in the parameter's list is **meaningless** and the function will work just as well if it is not supplied
+* `default_param_1`: this parameter is **optional**, its placement in the sequence in the parameter's list is **meaningless** and the function will work just as well if it is not supplied
+
+**NB:**
+* the optional and default parameter are **semantically identical**. i.e. to the reader of the code, they convey the same information and they behave the same way
+* semantically, whether the optional and default parameter are default to `None` or a different value (here respectively `"1"` and `1`) is identical. `None` is a value and as such, it does not convey a "requirement". i.e. that the default of a parameter is `None` does not mean that the parameter is required and needs a non-`None` value. It means *" `None` is one of the values I can have, all good"*.
 
 Take the TS class (named parameters) example:
 ```typescript
@@ -158,17 +162,25 @@ interface Props{
     kw_param_1: string;
     kw_param_2: string | null;
     optional_param_1?: string;
+    optional_param_2: string | undefined;
 }
 ```
 
-Let's break down what the developer of this class is telling us 1 member/parameter at a time:
-* `kw_param_1`:
-* `kw_param_2`:
-* `optional_param_1`:
+Let's break down what the developer of this class is telling us:
+* `kw_param_1`: this parameter is **required** and its placement in the sequence in the parameter's list is **meaningless**
+* `kw_param_2`: this parameter is **required** and its placement in the sequence in the parameter's list is **meaningless**
+* `optional_param_1`: this parameter is **optional** and the function will work just as well if it is not supplied
+* `optional_param_2`: this parameter is **optional** and the function will work just as well if it is not supplied
+
+**NB:**
+* `optional_param_1` and `optional_param_2` are 2 ways of expressing the same thing.
+* `kw_param_2` and `optional_param_2` express different intent: omitted/`undefined` means "I will work just as well if it is not supplied", `null` means "I need a value and the value may be `null` which dictates a specific behaviour".
 
 ## Takeaways
 
-The code is certainly instructions for the **machine** but it is also the embodiment of a **developer**'s thoughts and approach to a solution. It is a message left by the author for the future. Whether it is during the code review process, the maintenance process or simply leveraging the existing modules, **we**, the developers, (including the original author) will have to make sense of the code as fast and as unequivocally as possible. Our best-case scenario is to be able to use or to update the functionality built without having to deep dive into code every time.
+The code is certainly instructions for the **machine** but it is also the embodiment of a **developer**'s thoughts and approach to a solution. It is a message left by the author for the future. Whether it is during the code review process, the maintenance process or simply leveraging the existing modules. **WE**, the developers, (including the original author) will have to make sense of the code as fast and as unequivocally as possible the next time it is read. Our best-case scenario is to be able to use or to update the functionality built without having to deep dive into code every time.
+
+Additionally, depending on the programming language used, the semantics meaning of all variables can be used by the interpreter or compiler to optimize the code further.
 
 # Acknowledgement
 
@@ -184,7 +196,6 @@ I have seen 2 variations of how it comes to life.
 ```python
 def my_function(
     pos_param_1,
-    *,
     optional_param_1="1",
     default_param_1=1,
 ):
@@ -196,18 +207,18 @@ my_function(
 )
 ```
 **pros**
-* easier to add a parameter:
-    * you do not need to add the argument for all invocation
-    * the task ordering arguments is no longer applicable
+* it is easier to add a parameter:
+    * the task of ordering arguments/parameters is no longer applicable
+* it is easier to remember the name (and meaning, if properly named) of arguments/parameters.
 
 **con**
-* the arguments lose all semantic meaning: without reading the declaration of the function you cannot tell if an argument is needed or not: it hard to distinguish a bug (missing argument) from an intended declaration
+* the arguments lose most semantic meaning: without reading the declaration of the function you cannot tell if an argument is needed or not: it hard to distinguish a bug (missing argument) from an intended declaration
+* you still need to add a new positional argument for all invocation
 
 ### Some exclusively use it at invocation time and declaration time.
 ```python
 def my_function(
-    pos_param_1,
-    *,
+    pos_param_1="",
     optional_param_1="1",
     default_param_1=1,
     new_param=None,
@@ -221,13 +232,13 @@ my_function(
 ```
 **pros**
 * easier to add a parameter:
-    * you do not need to add the argument for all invocation
-    * the task ordering arguments is no longer applicable
+    * you do not need to add the argument to all invocations
+    * the task of ordering arguments/parameters is no longer applicable
 
 **con**
 * it is hard (if at all possible) to set sensible defaults
-* the code in the function needs to handle the possible combinations (permutations do not matter:stuck_out_tongue_winking_eye:) of supplied arguments: lead to lots of defensive programming or hoping for the best and dealing with consequences
-* the arguments lose all semantic meaning: without reading the body of the function you cannot tell if an argument is needed or not
+* the code in the function needs to handle the possible combinations (permutations do not matter:stuck_out_tongue_winking_eye:) of supplied vs not supplied arguments: lead to lots of defensive programming or hoping for the best and dealing with consequences
+* the arguments lose all semantic meaning: without reading the body of the function you cannot tell if an argument is required or not
 
 Now, you are in the know.
 <p align="center">
@@ -238,4 +249,4 @@ Now, you are in the know.
 
 # Nota __very__ Bene
 This post offers a stance on the semantic significance of the different kinds of parameters available in various languages.<br />
-This stance reflects my personal approach to the matter.
+This stance reflects only my personal approach to the matter.
