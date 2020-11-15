@@ -154,7 +154,7 @@ Let's break down what the developer of this function is telling:
 
 **NB:**
 * the optional and default parameter are **semantically identical**. i.e. to the reader of the code, they convey the same information and they behave the same way
-* semantically, whether the optional and default parameter are default to `None` or a different value (here respectively `"1"` and `1`) is identical. `None` is a value and as such, it does not convey a "requirement". i.e. that the default of a parameter is `None` does not mean that the parameter is required and needs a non-`None` value. It means *" `None` is one of the values I can have, all good"*.
+* semantically, whether the optional and default parameter are defaulted to `None` or a different value (here respectively `"1"` and `1`) is identical. `None` is a value and as such, it does not convey a "requirement". i.e. that the default of a parameter is `None` does not mean that the parameter is required and needs a non-`None` value. It means *" `None` is one of the values I can have, all good"*.
 
 Take the TS class (named parameters) example:
 ```typescript
