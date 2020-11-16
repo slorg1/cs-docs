@@ -1,5 +1,5 @@
 ---
-title: To be or to be... the existential crisis of parameters
+title: To be or ~~not~~ how to be... the existential crisis of parameters
 ---
 # {{page.title}}
 
