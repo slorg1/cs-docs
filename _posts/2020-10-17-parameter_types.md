@@ -3,28 +3,38 @@ title: To be ~~or not~~ and how to be... the existential crisis of parameters
 ---
 # {{page.title}}
 
-By the end of the article, you will be able to tell the difference between these declarations and when to use which with discernment.
+While updating or simply trying to use a piece of code, have you ever read it and wondered why a variable/member is declared a certain way? Or tried to understand the previous developer's intent for 1 variable/member over the other?
+
+I have chosen to use typescript and Python to provide simple and concrete examples in this article.
+
+Examples:
 
 Python:
 ```python
 def create_new_user(first_name, last_name, avatar=None,):
     ...
 ```
-vs
+Is `avatar` meaningfully different from `first_name`?
+
+if the function was declared like so:
 ```python
 def create_new_user(first_name=None, last_name=None, avatar=None,):
     ...
 ```
+Would it mean something different to you?
 
 TypeScript:
 ```typescript
 interface User{
     firstName: string
     lastName: string
-    avatar?
+    avatar?: string
 }
 ```
-vs
+Is `avatar` meaningfully different from `first_name`?
+
+if the interface was declared like so:
+
 ```typescript
 interface User{
     firstName: string
@@ -32,6 +42,11 @@ interface User{
     avatar: string|null
 }
 ```
+Would it mean something different to you?
+
+Functionally, they relatively the same. Why use one form over the other and does it matter?
+
+There is a sizable difference in [semantic meaning](#what-do-i-mean-by-semantic-meaning) and by the end of the article, you will be able to tell the difference between these declarations and when to use which with discernment to help the next person reading your code.
 
 <div  style="width:316px;margin-left: auto; margin-right: auto">
     <p style="margin-left: auto; margin-right: auto; text-align: center">"Forget Everything You Think You Know" - Ancient One</p>
@@ -80,7 +95,7 @@ In the same way in TS as a function
 function myFunction(
     pos_param_1: string,
     pos_param_2: string,
-    default_param_1=1,
+    default_param_1=1: number,
     optional_param_1?: string,
 ) {
     // nothing to see here
@@ -108,7 +123,9 @@ my_function(
 
 ## What do I mean by semantic meaning?
 
-The semantic meaning is the meaning (from Greek _sēmantikos_ 'significant') "something" has based on its relationship with others. The dictionary reference for the definition is [here](https://www.merriam-webster.com/dictionary/semantics).
+There are 2 types of semantics in computer science.
+One is about [programming language theory](https://en.wikipedia.org/wiki/Semantics_(computer_science)), that is not the one I am talking about there.
+The other is about the semantic **meaning** which is the meaning (from Greek _sēmantikos_ 'significant') "something" has based on its relationship with others. The dictionary reference for the definition is [here](https://www.merriam-webster.com/dictionary/semantics).
 
 The salient point here is: what does the declaration of a variable mean beyond the syntactic and computational correctness?
 
@@ -130,7 +147,9 @@ The salient point here is: what does the declaration of a variable mean beyond t
 
 A thought that was shared to me by Tony Deigh (CTO of Jobcase) that stuck in my mind: "Code is read more than it is executed".
 
-I keep it as a reminder that correctness (it does what it is supposed to do) and optimization for execution are important and it is also key to remember that code is read by other humans (mostly). As a result, it needs to remain human-readable.
+I keep it as a reminder that that first and foremost, code is read by other humans.
+Correctness (it does what it is supposed to do) and optimization for execution are **necessary but not sufficient** (permission-to-play if you will).
+As a result, it needs to remain human-readable.
 
 ## Breaking it down
 
@@ -146,7 +165,7 @@ def my_function(
 ):
     ...
 ```
-Let's break down what the developer of this function is telling:
+Let's break down what the developer of this function is telling us:
 * `pos_param_1`: this parameter is **required** and its placement in the sequence in the parameter's list is **likely important**
 * `kw_param_1`: this parameter is **required** and its placement in the sequence in the parameter's list is **meaningless**
 * `optional_param_1`: this parameter is **optional**, its placement in the sequence in the parameter's list is **meaningless** and the function will work just as well if it is not supplied
@@ -176,13 +195,88 @@ Let's break down what the developer of this class is telling us:
 * `optional_param_1` and `optional_param_2` are 2 ways of expressing the same thing.
 * `kw_param_2` and `optional_param_2` express different intent: omitted/`undefined` means "I will work just as well if it is not supplied", `null` means "I need a value and the value may be `null` which dictates a specific behaviour".
 
+Now, let's apply our newfound understanding to the examples from the introduction:
+
+Python:
+```python
+def create_new_user(first_name, last_name, avatar=None,):
+    ...
+```
+> Is `avatar` meaningfully different from `first_name`?
+
+Yes, it is different. From reading the declaration of the function, we understand that a user may or may not have an avatar but it needs a first and last name.
+Executing:
+```python
+    create_new_user('John', 'Doe',)
+```
+and
+```python
+    create_new_user('Jane', 'Doe', avatar='an avatar')
+```
+Will successfully produce 2 full-blown users. We can use the function like that with confidence.
+
+> if the function was declared like so:
+```python
+def create_new_user(first_name=None, last_name=None, avatar=None,):
+    ...
+```
+> Would it mean something different to you?
+
+Yes, it does. It seems like I would be able to use it like so:
+
+```python
+    create_new_user()
+```
+and I would get a full-blown user... but what user? TBH, I would be suspicious and I would look at the doc and/or implementation to know if the declaration is accurate as I am not supplying anything "special" or "unique" for the user, I doubt we are building a clone army.
+
+TypeScript:
+```typescript
+interface UserOmitAvatar{
+    firstName: string
+    lastName: string
+    avatar?: string
+}
+```
+> Is `avatar` meaningfully different from `first_name`?
+
+Yes, it is different. From reading the declaration of the function, we understand that a user may or may not have an avatar but it needs a first and last name.
+
+> if the interface was declared like so:
+
+```typescript
+interface UserNeedAvatar{
+    firstName: string
+    lastName: string
+    avatar: string|null
+}
+```
+> Would it mean something different to you?
+
+Yes, it is different. From reading the declaration of the function, we understand that a user may or may not have an avatar and I have to explicitly say that the user does not have one but it needs a first and last name.
+
+```typescript
+const user_1: UserNeedAvatar = {"firstName": "John", "lastName": "Doe", "avatar": null}
+```
+```typescript
+const user_2: UserNeedAvatar = {"firstName": "Jane", "lastName": "Doe", "avatar": "an avatar"}
+```
+```typescript
+const user_3: UserOmitAvatar = {"firstName": "Dom", "lastName": "Doe",}
+```
+
+In these 3 example invocations, the values of `avatar` are very different:
+* `user_1` explicitly has no avatar. Deal with it! :stuck_out_tongue_winking_eye:
+* `user_2` explicitly has an avatar. Easy, let's use it!
+* `user_3`, it is unclear. They may or may not have one, it was just not given. Defensive programming, here we are! Is it a 3 state value (`null`, `string`, `undefined`)? or is `null` and `undefined` the same?
+
+
 ## Takeaways
 
-The code is certainly instructions for the **machine** but it is also the embodiment of a **developer**'s thoughts and approach to a solution. It is a message left by the author for the future. Whether it is during the code review process, the maintenance process or simply leveraging the existing modules. **WE**, the developers, (including the original author) will have to make sense of the code as fast and as unequivocally as possible the next time it is read. Our best-case scenario is to be able to use or to update the functionality built without having to deep dive into code every time.
+The code is certainly instructions for the **machine** but it is also the embodiment of a **developer**'s thoughts and approach to a solution. It is a message left by the author for the future. Whether it is during the code review process, the maintenance process or simply leveraging the existing modules. **WE**, the developers, (including the original author) will have to make sense of the code as fast and as unequivocally as possible the next time it is read. Our best-case scenario is to be able to use or to update the functionality built without having to read and understand **each** piece of code **every time**.
 
-Additionally, depending on the programming language used, the semantics meaning of all variables can be used by the interpreter or compiler to optimize the code further.
+Additionally, depending on the programming language used, the semantic meaning of all variables can be used by the interpreter or compiler to optimize the code further.
 
-# Acknowledgement
+# Common Alternate approaches
 
 Before closing on the subject, I would like to bring up the key counter-arguments that I balance constantly in my mind assessing which strategy works best.
 
@@ -246,7 +340,3 @@ Now, you are in the know.
         Choose your path, do not settle
     </strong>
 </p>
-
-# Nota __very__ Bene
-This post offers a stance on the semantic significance of the different kinds of parameters available in various languages.<br />
-This stance reflects only my personal approach to the matter.
