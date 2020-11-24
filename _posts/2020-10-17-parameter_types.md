@@ -269,14 +269,7 @@ In these 3 example invocations, the values of `avatar` are very different:
 * `user_2` explicitly has an avatar. Easy, let's use it!
 * `user_3`, it is unclear. They may or may not have one, it was just not given. Defensive programming, here we are! Is it a 3 state value (`null`, `string`, `undefined`)? or is `null` and `undefined` the same?
 
-
-## Takeaways
-
-The code is certainly instructions for the **machine** but it is also the embodiment of a **developer**'s thoughts and approach to a solution. It is a message left by the author for the future. Whether it is during the code review process, the maintenance process or simply leveraging the existing modules. **WE**, the developers, (including the original author) will have to make sense of the code as fast and as unequivocally as possible the next time it is read. Our best-case scenario is to be able to use or to update the functionality built without having to read and understand **each** piece of code **every time**.
-
-Additionally, depending on the programming language used, the semantic meaning of all variables can be used by the interpreter or compiler to optimize the code further.
-
-# Common Alternate approaches
+# Common Alternate Approaches
 
 Before closing on the subject, I would like to bring up the key counter-arguments that I balance constantly in my mind assessing which strategy works best.
 
@@ -333,6 +326,12 @@ my_function(
 * it is hard (if at all possible) to set sensible defaults
 * the code in the function needs to handle the possible combinations (permutations do not matter:stuck_out_tongue_winking_eye:) of supplied vs not supplied arguments: lead to lots of defensive programming or hoping for the best and dealing with consequences
 * the arguments lose all semantic meaning: without reading the body of the function you cannot tell if an argument is required or not
+
+# Takeaways
+
+The code is certainly instructions for the **machine** but it is also the embodiment of a **developer**'s thoughts and approach to a solution. It is a message left by the author for the future. Whether it is during the code review process, the maintenance process or simply leveraging the existing modules. **WE**, the developers, (including the original author) will have to make sense of the code as fast and as unequivocally as possible the next time it is read. Our best-case scenario is to be able to use or to update the functionality built without having to read and understand **each** piece of code **every time**.
+
+Additionally, depending on the programming language used, the semantic meaning of all variables can be used by the interpreter or compiler to optimize the code further.
 
 Now, you are in the know.
 <p align="center">
