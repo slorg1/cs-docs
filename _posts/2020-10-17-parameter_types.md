@@ -171,7 +171,7 @@ Let's break down what the developer of this function is telling us:
 * `optional_param_1`: this parameter is **optional**, its placement in the sequence in the parameter's list is **meaningless** and the function will work just as well if it is not supplied
 * `default_param_1`: this parameter is **optional**, its placement in the sequence in the parameter's list is **meaningless** and the function will work just as well if it is not supplied
 
-**NB:**
+**Note :warning:**
 * the optional and default parameter are **semantically identical**. i.e. to the reader of the code, they convey the same information and they behave the same way
 * semantically, whether the optional and default parameter are defaulted to `None` or a different value (here respectively `"1"` and `1`) is identical. `None` is a value and as such, it does not convey a "requirement". i.e. that the default of a parameter is `None` does not mean that the parameter is required and needs a non-`None` value. It means *" `None` is one of the values I can have, all good"*.
 
@@ -191,7 +191,7 @@ Let's break down what the developer of this class is telling us:
 * `optional_param_1`: this parameter is **optional** and the function will work just as well if it is not supplied
 * `optional_param_2`: this parameter is **optional** and the function will work just as well if it is not supplied
 
-**NB:**
+**Note :warning:**
 * `optional_param_1` and `optional_param_2` are 2 ways of expressing the same thing.
 * `kw_param_2` and `optional_param_2` express different intent: omitted/`undefined` means "I will work just as well if it is not supplied", `null` means "I need a value and the value may be `null` which dictates a specific behaviour".
 
