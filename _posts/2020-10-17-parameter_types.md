@@ -5,9 +5,18 @@ title: To be ~~or not~~ and how to be... the existential crisis of parameters
 
 While updating or simply trying to use a piece of code, have you ever read it and wondered why a variable/member is declared a certain way? Or tried to understand the previous developer's intent for 1 variable/member over the other?
 
-I have chosen to use typescript and Python to provide simple and concrete examples in this article.
+Does it even matter? And Why?
 
-Examples:
+A couple years ago, Tony Deigh (CTO of Jobcase) shared a thought that stuck in my mind: "Code is read more than it is executed".
+
+I keep it as a reminder that that first and foremost, code is read by other humans.
+Correctness (it does what it is supposed to do) and optimization for execution are **necessary but not sufficient** (permission-to-play if you will).
+As a result, it needs to remain human-readable.
+
+Here are a 2 concrete examples to illustrate the key questions in code. I have chosen to use typescript and Python to illustrate the points with concise, simple, and concrete examples.
+
+***:warning: Note :warning:**
+Concepts discussed here apply to all languages.
 
 Python:
 ```python
@@ -46,7 +55,9 @@ Would it mean something different to you?
 
 Functionally, they relatively the same. Why use one form over the other and does it matter?
 
-There is a sizable difference in [semantic meaning](#what-do-i-mean-by-semantic-meaning) and by the end of the article, you will be able to tell the difference between these declarations and when to use which with discernment to help the next person reading your code.
+**TL;DR** I will answer these questions in detail at the [end of the article](#answers-to-the-introduction).
+
+There is a sizable difference in [semantic meaning](#what-do-i-mean-by-semantic-meaning) and, if you bear with me, by the end of this article: you will be able to tell the difference between these declarations and when to use which with discernment to help the next person reading your code.
 
 <div  style="width:316px;margin-left: auto; margin-right: auto">
     <p style="margin-left: auto; margin-right: auto; text-align: center">"Forget Everything You Think You Know" - Ancient One</p>
@@ -143,14 +154,6 @@ The salient point here is: what does the declaration of a variable mean beyond t
 
 # Semantic meaning of parameters
 
-## Why does it even matter?
-
-A thought that was shared to me by Tony Deigh (CTO of Jobcase) that stuck in my mind: "Code is read more than it is executed".
-
-I keep it as a reminder that that first and foremost, code is read by other humans.
-Correctness (it does what it is supposed to do) and optimization for execution are **necessary but not sufficient** (permission-to-play if you will).
-As a result, it needs to remain human-readable.
-
 ## Breaking it down
 
 Taking this Python as an exhaustive example (the TS equivalent is the same):
@@ -195,6 +198,7 @@ Let's break down what the developer of this class is telling us:
 * `optional_param_1` and `optional_param_2` are 2 ways of expressing the same thing.
 * `kw_param_2` and `optional_param_2` express different intent: omitted/`undefined` means "I will work just as well if it is not supplied", `null` means "I need a value and the value may be `null` which dictates a specific behaviour".
 
+## Answers to the introduction
 Now, let's apply our newfound understanding to the examples from the introduction:
 
 Python:
@@ -269,9 +273,9 @@ In these 3 example invocations, the values of `avatar` are very different:
 * `user_2` explicitly has an avatar. Easy, let's use it!
 * `user_3`, it is unclear. They may or may not have one, it was just not given. Defensive programming, here we are! Is it a 3 state value (`null`, `string`, `undefined`)? or is `null` and `undefined` the same?
 
-# Common Alternate Approaches
+## Common Alternate Approaches
 
-Before closing on the subject, I would like to bring up the key counter-arguments that I balance constantly in my mind assessing which strategy works best.
+Before on the subject, I would like to bring up the key counter-arguments that I balance constantly in my mind assessing which strategy works best.
 
 The argument goes as follows:
 
