@@ -3,20 +3,15 @@ title: To be ~~or not~~ and how to be... the existential crisis of parameters
 ---
 # {{page.title}}
 
-While updating or simply trying to use a piece of code, have you ever read it and wondered why a variable/member is declared a certain way? Or tried to understand the previous developer's intent for 1 variable/member over the other?
+Developers all know how much goes into building software, from architecture to declaring variables, to get to what we (and the business) consider success all too often overly simplified by the mere "making the code work".
 
-Does it even matter? And Why?
-
-A couple years ago, Tony Deigh (CTO of Jobcase) shared a thought that stuck in my mind: "Code is read more than it is executed".
-
-I keep it as a reminder that that first and foremost, code is read by other humans.
+On that subject, a couple of years ago, Tony Deigh (CTO of Jobcase) shared a thought that stuck in my mind: "Code is read more than it is executed".
+I keep it in mind as a reminder that first and foremost, code is read by other humans.
 Correctness (it does what it is supposed to do) and optimization for execution are **necessary but not sufficient** (permission-to-play if you will).
-As a result, it needs to remain human-readable.
 
-Here are a 2 concrete examples to illustrate the key questions in code. I have chosen to use typescript and Python to illustrate the points with concise, simple, and concrete examples.
+While updating or simply trying to use a piece of code, have you ever read it and wondered why a variable/member is declared a certain way? Or tried to understand the previous developer's intent for variables/members?
 
-***:warning: Note :warning:**
-Concepts discussed here apply to all languages.
+Here are 2 concrete examples illustrating these key questions in code. Although the concepts discussed here apply to all languages, I have chosen to use typescript and Python to illustrate the points with concise, simple, and concrete examples.
 
 Python:
 ```python
@@ -55,9 +50,11 @@ Would it mean something different to you?
 
 Functionally, they relatively the same. Why use one form over the other and does it matter?
 
-**TL;DR** I will answer these questions in detail at the [end of the article](#answers-to-the-introduction).
+**TL;DR** Detailed answers to these questions are at the [end of the article](#answers-to-the-introduction).
 
 There is a sizable difference in [semantic meaning](#what-do-i-mean-by-semantic-meaning) and, if you bear with me, by the end of this article: you will be able to tell the difference between these declarations and when to use which with discernment to help the next person reading your code.
+
+First, I will go over a few definitions to align (level) our knowledge and build a common understanding of the core concepts. I will then expose the concepts using a few chosen examples to illustrate them as I go. I will continue by contrasting this approach with other common ones. Finally, I will answer the questions highlighted above (in the introduction) and highlight key takeaways.
 
 <div  style="width:316px;margin-left: auto; margin-right: auto">
     <p style="margin-left: auto; margin-right: auto; text-align: center">"Forget Everything You Think You Know" - Ancient One</p>
@@ -156,7 +153,7 @@ The salient point here is: what does the declaration of a variable mean beyond t
 
 ## Breaking it down
 
-Taking this Python as an exhaustive example (the TS equivalent is the same):
+Take this Python function declaration for example:
 
 ```python
 def my_function(
@@ -178,7 +175,7 @@ Let's break down what the developer of this function is telling us:
 * the optional and default parameter are **semantically identical**. i.e. to the reader of the code, they convey the same information and they behave the same way
 * semantically, whether the optional and default parameter are defaulted to `None` or a different value (here respectively `"1"` and `1`) is identical. `None` is a value and as such, it does not convey a "requirement". i.e. that the default of a parameter is `None` does not mean that the parameter is required and needs a non-`None` value. It means *" `None` is one of the values I can have, all good"*.
 
-Take the TS class (named parameters) example:
+Now, let's take this TS class (named parameters) example:
 ```typescript
 interface Props{
     kw_param_1: string;
@@ -275,7 +272,7 @@ In these 3 example invocations, the values of `avatar` are very different:
 
 ## Common Alternate Approaches
 
-Before on the subject, I would like to bring up the key counter-arguments that I balance constantly in my mind assessing which strategy works best.
+Before closing on the subject, I would like to bring up the key counter-arguments that I balance constantly in my mind assessing which strategy works best.
 
 The argument goes as follows:
 
